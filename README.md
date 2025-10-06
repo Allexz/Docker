@@ -1,5 +1,5 @@
 # Docker
-## Treinamento Docker (Udemy  Argus Academy)
+## Treinamento Docker (Udemy - Argus Academy)
 
 **Conceitos Fundamentais do Docker:**
 
@@ -17,7 +17,7 @@
 # Comandos básicos  
 Repositório (Registry) oficial do Docker - **https://hub.docker.com/**
 1. **docker pull <<image:tag>>**  (Resgata a imagem do repositório (Registry)
-Exemplo:     docker pull mcr.microsoft.com/mssql/server:2022-latest
+Exemplo:     **docker pull mcr.microsoft.com/mssql/server:2022-latest**  
 2. **docker ps --all / docker ps -a** (lista todos os contêiners)  
 Obs.: **docker ps** (lista somente os contêineres em execução)    
 3. **docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=SuaSenhaForte123" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest**  
@@ -32,8 +32,16 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
    **COPY ./opt** //copia o conteúdo do diretório atual para dentro do diretório OPT no contêiner    
    **WORKDIR /opt** //define o diretório OPT como diretório de trabalho    
    **CMD node server.js** // executa o comando node server.js quando o contêiner for iniciado.  
-   **docker build -t <<nome da imagem>>**  Constrói a imagem de acordo com as instruções do arquivo dockerfile;
-5. **docker run <<nome da imagem>>** Executa uma imagem; 
+   **docker build -t <<nome:da:imagem>>**  Constrói a imagem de acordo com as instruções do arquivo dockerfile;
+5. **docker run <<nome:da:imagem>>** Executa uma imagem;
+6. Comandos para listar e remover imagens:  
+   **docker image ls** (lista as imagens)  
+   **docker image rm <<nome:da:imagem>>** (remove a imagem)  
+   **docker rmi <<nome:da:imagem>>** (atalho para o comando que remove a imagem)
+7. Comando para adicionar um NAMESPACE à imagem:  
+   **docker tag <<nome:da:imagem>> <<namespace/repository:version>>**
+8. Comando para inspecionar a imagem:  
+   **docker inspect <<nome:da:imagem>>**
 
 
 
