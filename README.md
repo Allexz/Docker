@@ -42,6 +42,8 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
    **docker tag <<nome:da:imagem>> <<namespace/repository:version>>**
 8. Comando para inspecionar a imagem:  
    **docker inspect <<nome:da:imagem>>**
+9. Comando para executar e acessar interativamente um contêiner:  
+   **docker run -it <<nome:da:imagem>>**  
 
 
 
