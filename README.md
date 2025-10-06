@@ -26,7 +26,7 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
    3.3 -p 1433:1433 - mapeia a porta 1433 do contêiner para a 1433 do HOST  
    3.4 --name sqlserver - nomeia o contêiner  
    3.5 -d - executa o contêiner em modo DETACHED (o terminal fica livre)
-4. O arquivo DOCKERFILE contém instruções da configuração da imagem que se pretende construir  
+4. O arquivo **DOCKERFILE** contém instruções da configuração da imagem que se pretende construir  
    Exemplo:  
    **FROM node:alpine** // usa uma imagem leve do NODEJS    
    **COPY ./opt** //copia o conteúdo do diretório atual para dentro do diretório OPT no contêiner    
