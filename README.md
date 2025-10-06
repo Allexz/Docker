@@ -14,9 +14,16 @@
 - **Volume**: Persistência de dados fora do ciclo de vida do container.
 - **Rede**: Conexão entre containers, com modos como bridge, host ou overlay.
 
-# Comandos básicos
-** docker pull <<image:tag>>  
+# Comandos básicos  
+Repositório (Registry) oficial do Docker - **https://hub.docker.com/**
+1. **docker pull <<image:tag>>**  (Resgata a imagem do repositório (Registry)
 Exemplo:     docker pull mcr.microsoft.com/mssql/server:2022-latest
+2. **docker ps --all / docker ps -a** (lista todos os contêiners)  
+Obs.: **docker ps** (lista somente os contêineres em execução)    
+3. **docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=SuaSenhaForte123" -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest**  
+   3.1 -e "ACCEPT_EULA=Y" aceitação dos termos de licença do SQL Server  
+   3.2
+
 
 
  
