@@ -13,6 +13,7 @@
 - **Composição**: Uso de `docker-compose` para definir e gerenciar múltiplos containers (serviços, redes, volumes).
 - **Volume**: Persistência de dados fora do ciclo de vida do container.
 - **Rede**: Conexão entre containers, com modos como bridge, host ou overlay.
+- **Docker Compose**: é uma ferramenta para definir e executar aplicações **DOCKER** com múltiplos contêineres. Através de um arquivo **YAML** é feita a configuração de todos serviços, redes e volumes necessários para a aplicação funcionar.  
 
 # Comandos básicos  
 Repositório (Registry) oficial do Docker - **https://hub.docker.com/**
