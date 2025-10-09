@@ -52,6 +52,8 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
 11. Utilizando variáveis de ambiente no contexto do contêiner:  
     **ENV APP_PORT=8080** Define a variável **APP_PORT** com o valor **8080**; esta variável pode ser utilizada em SCRIPTS e configurações referenciando-a por **${APP_PORT}**
 
+    **Incluir trecho sobre arquivos .env**
+
 
 
  
