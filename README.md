@@ -44,7 +44,13 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
 8. Comando para inspecionar a imagem:  
    **docker inspect <<nome:da:imagem>>**
 9. Comando para executar e acessar interativamente um contêiner:  
-   **docker run -it <<nome:da:imagem>>**  
+   **docker run -it <<nome:da:imagem>>**
+10. Comando para execução de comandos no contexto do contêiner:  
+    **RUN cp /tmp/original.txt /app/copia.txt**  
+    **RUN /app/meu-script.sh**  
+    **RUN echo "Olá, Docker!"**  
+11. Utilizando variáveis de ambiente no contexto do contêiner:  
+    **ENV APP_PORT=8080** Define a variável **APP_PORT** com o valor **8080**; esta variável pode ser utilizada em SCRIPTS e configurações referenciando-a por **${APP_PORT}**
 
 
 
