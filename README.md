@@ -51,8 +51,22 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
     **RUN echo "Olá, Docker!"**  
 11. Utilizando variáveis de ambiente no contexto do contêiner:  
     **ENV APP_PORT=8080** Define a variável **APP_PORT** com o valor **8080**; esta variável pode ser utilizada em SCRIPTS e configurações referenciando-a por **${APP_PORT}**
+12. Utilizando arquivos para carregamento de variáveis de ambiente:  
+    Conteúdo do arquivo **.env**:    
+    **DB_HOST=localhost**  
+    **DB_PORT=5432**  
+    **DB_NAME=database**    
 
-    **Incluir trecho sobre arquivos .env**
+    No **docker-compose.yaml**  
+    **services:**  
+    ¬¬¬**database:**      
+    ¬¬¬¬¬¬**image:postgres**    
+    ¬¬¬¬¬¬**env_file: .env**      
+          
+             
+    
+
+ 
 
 
 
