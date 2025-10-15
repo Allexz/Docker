@@ -62,12 +62,22 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
     ¬¬¬**database:**      
     ¬¬¬¬¬¬**image:postgres**    
     ¬¬¬¬¬¬**env_file: .env**
-13.**docker build --build-arg ALPINE_VERSION=3.19 -t <<tag:imagem>>.** ARG define argumentos que podem ser encaminhados no build da imagem.  
-    Com múltiplos argumentos:  
+    
+13. **docker build --build-arg ALPINE_VERSION=3.19 -t <<tag:imagem>>.** ARG define argumentos que podem ser encaminhados no build da imagem.  
+    Utilizando com múltiplos argumentos:  
     **docker build --build-arg ALPINE_VERSION=3.19\  
     --build-arg ADD=http:\\example.com\  
     --build-arg PORT=8080  
-    -t <<tag:imagem>>**      
+    -t <<tag:imagem>>**
+    
+14. **Diferenças entre ARG e ENV:**
+      
+| Característica | ARG                           | ENV                           |
+|----------------|-------------------------------|-------------------------------|
+| **Tempo**      | Apenas durante `docker build` | Durante `docker build` E `docker run` |
+| **Uso**        | Variáveis de construção       | Configurações da aplicação    |
+| **Persiste**   | Não fica na imagem final      | Fica no container             |
+| **Exemplo**    | `ARG NODE_VERSION=18`         | `ENV DB_HOST=localhost`       |
           
              
     
