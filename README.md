@@ -1,5 +1,5 @@
 # Docker
-## Treinamento Docker (Udemy - Argus Academy)
+## Treinamento Docker   
 
 **Conceitos Fundamentais do Docker:**
 
@@ -61,7 +61,13 @@ Obs.: **docker ps** (lista somente os contêineres em execução)
     **services:**  
     ¬¬¬**database:**      
     ¬¬¬¬¬¬**image:postgres**    
-    ¬¬¬¬¬¬**env_file: .env**      
+    ¬¬¬¬¬¬**env_file: .env**
+13.**docker build --build-arg ALPINE_VERSION=3.19 -t <<tag:imagem>>.** ARG define argumentos que podem ser encaminhados no build da imagem.  
+    Com múltiplos argumentos:  
+    **docker build --build-arg ALPINE_VERSION=3.19\  
+    --build-arg ADD=http:\\example.com\  
+    --build-arg PORT=8080  
+    -t <<tag:imagem>>**      
           
              
     
